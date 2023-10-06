@@ -7,6 +7,7 @@ print(plt.style.available)
 # 设置数据
 input_values = range(1, 1001)
 squares = [value ** 2 for value in input_values]
+triples = [value ** 3 for value in input_values]
 
 # 生成图片数据结构
 fig, ax = plt.subplots()
@@ -22,7 +23,7 @@ ax.axis([0, 1100, 0, 1_100_000])    #限定坐标轴范围
 ax.tick_params(labelsize=14)
 
 # 生成连续的线图
-# ax.plot(input_values, squares, linewidth=3)     # linewidth表明线条粗细
+ax.plot(input_values, triples, linewidth=3)     # linewidth表明线条粗细
 # 生成散点图。    注意：一次只能生成plt的第一幅图
 # s表明绘制时使用的点的尺寸，color表示颜色
 # ax.scatter(input_values, squares, color='red', s=1)
